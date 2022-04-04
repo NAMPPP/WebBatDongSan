@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDS", "BDS\BDS.csproj", "{95FF242D-4FCE-40B0-9B8A-C6CD57D89766}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AFModels", "AFModels\AFModels.csproj", "{852A5AE8-D1A2-4BA8-9ABB-7B69363E2FA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95FF242D-4FCE-40B0-9B8A-C6CD57D89766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FF242D-4FCE-40B0-9B8A-C6CD57D89766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FF242D-4FCE-40B0-9B8A-C6CD57D89766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FF242D-4FCE-40B0-9B8A-C6CD57D89766}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852A5AE8-D1A2-4BA8-9ABB-7B69363E2FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852A5AE8-D1A2-4BA8-9ABB-7B69363E2FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852A5AE8-D1A2-4BA8-9ABB-7B69363E2FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852A5AE8-D1A2-4BA8-9ABB-7B69363E2FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E6701D9-A68D-4FD8-AB7A-DBC2C23F573B}
+	EndGlobalSection
+EndGlobal

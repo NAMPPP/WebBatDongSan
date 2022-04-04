@@ -1,0 +1,48 @@
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\AFModels.dll.config
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\AFModels.dll
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\AFModels.pdb
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\EntityFramework.dll
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.dll
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\EntityFramework.xml
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.xml
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\obj\Debug\AFModels.csprojResolveAssemblyReference.cache
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\obj\Debug\AFModels.csproj.CoreCompileInputs.cache
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\obj\Debug\AFModels.csproj.CopyComplete
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\obj\Debug\AFModels.dll
+E:\ĐỒ ÁN CHUYÊN NGÀNH CÔNG NGHỆ THÔNG TIN 2018\BDS\AFModels\obj\Debug\AFModels.pdb
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\AFModels.dll.config
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\AFModels.dll
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\AFModels.pdb
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\obj\Debug\AFModels.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\obj\Debug\AFModels.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\obj\Debug\AFModels.csproj.CopyComplete
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\obj\Debug\AFModels.dll
+C:\Users\Admin\Downloads\DACN-151250533116\BDS\AFModels\obj\Debug\AFModels.pdb
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\AFModels.dll.config
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\AFModels.dll
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\AFModels.pdb
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\obj\Debug\AFModels.csprojAssemblyReference.cache
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\obj\Debug\AFModels.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\obj\Debug\AFModels.csproj.CopyComplete
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\obj\Debug\AFModels.dll
+C:\Users\Admin\Downloads\BDS\BDS\AFModels\obj\Debug\AFModels.pdb
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\AFModels.dll.config
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\AFModels.dll
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\AFModels.pdb
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\EntityFramework.dll
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\EntityFramework.xml
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\obj\Debug\AFModels.csproj.AssemblyReference.cache
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\obj\Debug\AFModels.csproj.CoreCompileInputs.cache
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\obj\Debug\AFModels.csproj.CopyComplete
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\obj\Debug\AFModels.dll
+C:\Users\Nam\Desktop\BDS\BDS\AFModels\obj\Debug\AFModels.pdb
