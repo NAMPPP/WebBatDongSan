@@ -1,0 +1,57 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.QuanLyDatThueKhachHang>
+@{
+    ViewBag.Title = "QuanLyDatThueKhachHang";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Danh sách quản lý đặt thuê: </h2>
+<div class="x_content">
+    <div class="table-responsive">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title">Mã Đặt</th>
+                    <th class="column-title">Mã KH</th>
+                    <th class="column-title">Mã BDS</th>
+                    <th class="column-title">Ngày Đặt</th>
+                    <th class="column-title">Ghi Chú</th>
+                    <th class="column-title">Thanh toán</th>
+                    <th class="column-title"></th>
+                    <th class="bulk-actions" colspan="7">
+                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td> @item.MaDat</td>
+                        <td> @item.MaKH </td>
+                        <td> @item.MaBDS</td>
+                        <td> @item.NgayDat </td>
+                        <td> @item.GhiChu </td>
+                        <td> @item.ThanhToan </td>
+                        <td>
+
+                            @using (Html.BeginForm("XuatHoaDon", "QuanLyDatThueKhachHang", new { @MaDat = item.MaDat, @MaKH = @item.MaKH, @MaBDS = @item.MaBDS }))
+                            {
+                                <a href="/Admin/QuanLyDatThueKhachHang/Edit/@item.MaDat" class="btn btn-success">Sửa</a>
+                                @Html.ActionLink("Xóa", "Delete", new { @MaDat = @item.MaDat }, new { @class = "btn btn-success" })
+                                <input type="submit" style="cursor:pointer;" value="Xuất Hóa Đơn" id="danhgia" class="btn btn-success">
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("QuanLyDatThue", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+

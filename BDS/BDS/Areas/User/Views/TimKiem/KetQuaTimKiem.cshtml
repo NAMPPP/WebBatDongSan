@@ -1,0 +1,47 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.BatDongSan>
+@{
+    ViewBag.Title = "KetQuaTimKiem";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<h2 font-weight:normal;color:black">Kết quả tìm kiếm</h2>
+<div>@ViewBag.ThongBao</div>
+<hr />
+<div class="x_content">
+    <div class="table-responsive">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    @*<th class="column-title">Mã BĐS</th>*@
+                    <th class="column-title">Tên BĐS</th>
+                    @*<th class="column-title">Mã Nhóm</th>
+                    <th class="column-title">Mã Loại</th>*@
+                    <th class="column-title">Ngày đăng</th>
+                    <th class="column-title"></th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                <tr class="even pointer">
+                    @*<td> @item.MaBDS </td>*@
+                    <td> @item.TenBDS </td>
+                    @*<td> @item.MaNhom </td>
+                    <td> @item.MaLoaiBDS </td>*@
+                    <td> @item.NgayDang </td>
+                    <td><a href="/User/User/Detail/@item.MaBDS" class="btn btn-success">Chi tiết</a></td>
+                </tr>
+                }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("BatDongSan", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+

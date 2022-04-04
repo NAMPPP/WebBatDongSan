@@ -1,0 +1,50 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.HoaDonKhachHang>
+@{
+    ViewBag.Title = "HoaDon";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Danh sách hóa đơn: </h2>
+<div class="x_content">
+    <div class="table-responsive">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title">Mã HD</th>
+                    <th class="column-title">Mã KH</th>
+                    <th class="column-title">Mã NV</th>
+                    <th class="column-title">Mã BDS</th>
+                    <th class="column-title">Tổng tiền</th>
+                    <th class="column-title">Ngày Thanh Toán</th>
+                    <th class="column-title"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td> @item.MaHD</td>
+                        <td> @item.MaKH</td>
+                        <td> @item.MaNV</td>
+                        <td> @item.MaBDS </td>
+                        <td> @item.TongTien </td>
+                        <td> @item.NgayThanhToan </td>
+                        <td>
+                            @Html.ActionLink("Xóa", "Delete", new { @MaHD = @item.MaHD }, new { @class = "btn btn-success" })
+                            <a href="/Admin/HoaDonKhachHang/ExportToWord/@item.MaHD" class="btn btn-success">In HĐ</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("HoaDon", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+

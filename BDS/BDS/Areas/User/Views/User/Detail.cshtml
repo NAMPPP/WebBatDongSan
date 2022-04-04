@@ -1,0 +1,80 @@
+﻿@using AFModels
+@using BDS.ViewModel
+@model ChiTietBDSViewModel
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<div class="events">
+    <div class="container">
+        <h3 class="agileinfo_header">Chi tiết</h3>
+        <div class="w3ls_event_grids">
+
+            <div class="col-md-6 wthree_events_grid_left">
+                <div class="wthree_events_grid_left1">
+                    <div class="wthree_events_grid_left1_grid">
+                        <div class="col-xs-4 wthree_events_grid_left1_gridl">
+                            <p>$@Model.Gia</p>
+                        </div>
+                        <div class="col-xs-8 wthree_events_grid_left1_gridr">
+                            <p>Khu vực: @Model.KhuVuc</p>
+                            <p>Diện tích: @Model.DienTich</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="wthree_events_grid_left1">
+                    <div class="wthree_events_grid_left1_grid">
+                        <div class="col-xs-4 wthree_events_grid_left1_gridl">
+                            <p>Phòng ngủ: @Model.PhongNgu</p>
+                        </div>
+                        <div class="col-xs-8 wthree_events_grid_left1_gridr">
+                            <p>@Model.Mota</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="wthree_events_grid_left1">
+                    <div class="wthree_events_grid_left1_grid">
+                        <div class="col-xs-4 wthree_events_grid_left1_gridl">
+                            <p>Phòng tắm: @Model.PhongTam</p>
+                        </div>
+                        <div class="col-xs-8 wthree_events_grid_left1_gridr">
+                            <p>Địa chỉ: @Model.DiaChiBDS</p>
+                            <p>Đậu xe: @Model.Paking</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 wthree_events_grid_right">
+                <img src="@Url.Content(""+@Model.Anh)" class="img-responsive" alt="Photo" />
+            </div>
+            <div class="clearfix"> </div>
+            <div>
+                @using (Html.BeginForm("DanhGia", "BinhLuan", new { @bds = Model.MaBDS, @strURL = Request.Url.ToString() }))
+                {
+                    <input type="submit" style="cursor:pointer;margin-bottom: 20px;" value="Xem đánh giá" id="danhgia" class="btn btn-success">
+                }
+            </div>
+            <div>
+                @using (Html.BeginForm("ThemDatThue", "DatThue", new { @iMaBDS = Model.MaBDS, @strURL = Request.Url.ToString() }))
+                {
+                    <input type="submit" style="cursor:pointer" value="Đặt thuê" id="btnGioHang" class="btn btn-success">
+                }
+
+            </div>
+
+
+        </div>
+
+    </div>
+    
+</div>
+<div>
+    @Html.ActionLink("<<Quay lại", "Index", "User", new { @class = "btn btn-success" },null)
+</div>
+
+
+

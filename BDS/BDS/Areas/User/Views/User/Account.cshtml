@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Account";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<div class="form-horizontal">
+    <h4>Menu</h4>
+    <hr />
+
+    <div class="form-group">
+        <a href="/User/User/EditInfo">1. Chỉnh sửa thông tin cá nhân</a>
+    </div>
+    <div class="form-group">
+        <a href="/User/BatDongSan/Poster/@Session["UserName"].ToString()">2. Xem danh sách các bất động sản đã đăng</a>
+    </div>
+
+</div>
+
+<div>
+    @Html.ActionLink("<< Quay Lại", "Index")
+</div>
+

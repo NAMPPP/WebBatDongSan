@@ -1,0 +1,47 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.LoaiBatDongSan>
+@{
+    ViewBag.Title = "LoaiBatDongSan";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Danh sách: </h2>
+<div class="x_content">
+
+    <a href="/Admin/LoaiBatDongSan/Create/" class="btn btn-success">Thêm Loại Bất Động Sản</a>
+    <div class="table-responsive">
+
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title">Mã Loại BĐS </th>
+                    <th class="column-title">Tên Loại BĐS </th>
+                    <th class="column-title"></th>
+
+                    <th class="bulk-actions" colspan="7">
+                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td> @item.MaLoaiBDS </td>
+                    <td> @item.TenLoaiBDS </td>
+                    <td>
+                        <a href="/Admin/LoaiBatDongSan/Edit/@item.MaLoaiBDS" class="btn btn-success">Sửa</a>
+                        <a href="/Admin/LoaiBatDongSan/Delete/@item.MaLoaiBDS" class="btn btn-success">Xóa</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("LoaiBatDongSan", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+<body class="login">
+    <div>
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    @using (Html.BeginForm())
+                    {
+                        <form>
+                            <h1>Quên mật khẩu!</h1>
+                            <div>
+                                @Html.TextBox("txtTaiKhoan", "", new { @class = "form-control", @placeholder = "UserName" })
+                            </div>
+                            <div>
+                                @Html.TextBox("txtGmail", "", new { @class = "form-control", @placeholder = "Gmail" })
+                            </div>
+                            <h2 style="color:red">@ViewBag.ThongBao</h2>
+                            <div>
+                                <button type="submit" class="btn btn-success" id="btnSubmit" name="btnSubmit">Xác nhận</button>
+                            </div>
+
+                            <div class="clearfix"></div>
+                        </form>
+                    }
+                </section>
+            </div>
+        </div>
+    </div>
+</body>

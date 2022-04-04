@@ -1,0 +1,45 @@
+﻿@using BDS.ViewModel
+@model List<BDS.ViewModel.BinhLuanViewModel>
+@{
+    /**/
+
+    ViewBag.Title = "DanhGia";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<h2> Đánh giá từ khách hàng </h2>
+    <div class="x_content">
+        <div class="table-responsive">
+            <table class="table table-striped jambo_table bulk_action">
+                <thead>
+                    <tr class="headings">
+                        <th class="column-title">Tên BL</th>
+                        <th class="column-title">Nội dung</th>
+                        <th class="column-title">Ngày BL</th>
+                        <th class="column-title"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr class="even pointer">
+                            <td> @item.TenBL </td>
+                            <td> @item.NoiDungBL </td>
+                            <td> @item.NgayBL </td>
+                            <td></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+

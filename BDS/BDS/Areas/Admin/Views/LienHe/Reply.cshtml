@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Reply";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model AFModels.LienHe
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Trả lời khách hàng</h4>
+    <hr />
+    @Html.HiddenFor(model => model.MaLienHe)
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBox("txttoAddress", "", new { @class = "form-control",@Value = Session["reEmail"].ToString(), @placeholder = "Email người nhận" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Tiêu đề", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBox("txtSubject", "", new { @class = "form-control", @placeholder = "Tiêu đề" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Tin nhắn", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextArea("txtbody", null, new { @class = "form-control", @placeholder = "Nội dung" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Gửi" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Quay Lại", "LienHe", "LienHe")
+</div>
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+
+
+
+

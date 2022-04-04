@@ -1,0 +1,95 @@
+﻿@using AFModels
+@using BDS.ViewModel
+@model HoaDonViewModel
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hóa đơn thanh toán</title>
+    <link href="~/Areas/Admin/Content/HoaDon/style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="clearfix">
+        <div id="logo">
+            <img src="~/Areas/Admin/Content/HoaDon/logo.png" />         
+        </div>
+        <div id="company">
+            <h2 class="name">Bất Động Sản</h2>
+            <div>Phân khu đào tạo E1, Khu Công Nghệ cao TP.HCM, Phường Hiệp Phú, Quận 9, TP.HCM.</div>
+            <div>(+84) 396342804</div>
+            <div><a href="mailto:nguyenphuongnam989@gmail.com">nguyenphuongnam989@gmail.com</a></div>
+        </div>
+    </header>
+    <main>
+        <div id="details" class="clearfix">
+            <div id="client">
+                <div class="to">Hóa đơn cho:</div>
+                <h2 class="name">@Model.HoTenTV</h2>
+                <div class="address">@Model.DiaChi</div>
+                <div class="email"><a href="mailto:@Model.Email">@Model.Email</a></div>
+            </div>
+            <div id="invoice">
+                <h1>Mã HĐ: @Model.MaHD</h1>
+                <div class="date">Ngày lập hóa đơn: @DateTime.Now.ToString()</div>
+                <div class="date">Ngày thanh toán: @Model.NgayThanhToan</div>
+        </div>
+    </div>
+    <table border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th class="no">STT</th>
+                <th class="desc">Tên BĐS</th>
+                <th class="unit">Loại BĐS</th>
+                <th class="qty">Giá</th>
+                <th class="total">Giá(Chưa VAT)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="no">01</td>
+                <td class="desc">@Model.TenBDS</td>
+                <td class="unit">@Model.TenLoaiBDS</td>
+                <td class="qty" >$@Model.TongTien</td>
+                <td class="total">$@Model.TongTien</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Thuế VAT 10%</td>
+                <td>@Model.VAT $</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2">Tổng tiền</td>
+                <td>@Model.TongTienVAT $</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div id="thanks">Cảm ơn!</div>
+    <div id="nhanvien">
+        <p>Nhân Viên</p>
+        <p>@Model.HoTenNV</p>
+        <p class="chuky"><i>(chữ ký-ghi rõ họ tên)</i></p>
+        </div>
+
+    <div id="notices">
+        <div>LƯU Ý:</div>
+        <div class="notice">
+            <p>Một khoản phí tài chính 1,5% sẽ được thực hiện trên số dư chưa thanh toán sau 30 ngày.</p>
+            <p>Giá bán bằng đồng USD chỉ nhằm mục đích định hướng và tất cả các giao dịch được quy ra bằng đồng Việt Nam theo Luật Việt Nam</p>
+        </div>
+    </div>
+    </main>
+    <footer>
+        Hóa đơn đã được tạo trên máy tính và không hợp lệ nếu không có chữ ký và dấu. SHYNE&trade; Co.
+        <a href="/Admin/HoaDon/ExportPDF" class="btn btn-success">ExportPDF</a> <br>
+    </footer>
+</body>
+</html>
+

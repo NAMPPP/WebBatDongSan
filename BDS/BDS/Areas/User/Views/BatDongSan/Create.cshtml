@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+@model AFModels.BatDongSan
+
+
+<h2>Đăng tin</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Bất Động Sản</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.Label("Tên BĐS", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.TenBDS, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.TenBDS, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Nhóm Loại", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("MaNhom", ViewBag.MaNhom as SelectList, "--- Chọn nhóm ---")
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Loại BĐS", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("MaLoaiBDS", ViewBag.MaLoaiBDS as SelectList, "--- Chọn loại ---")
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.HiddenFor(model => model.NgayDang)
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Người đăng", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control", @Value = @Session["UserName"].ToString() } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.HiddenFor(model => model.Duyet)
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Thêm chi tiết" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("<< Quay Lại", "BatDongSan")
+</div>
+
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }*@
+
+
+

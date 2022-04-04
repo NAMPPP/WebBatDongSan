@@ -1,0 +1,208 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="~/Areas/Admin/Content/Manage/images/favicon.ico" type="image/ico" />
+
+    <title>CTTNHH BDS DN | </title>
+    <script src="~/Areas/Admin/Content/ckfinder/ckfinder.js"></script>
+    <!-- Bootstrap -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <!-- bootstrap-daterangepicker -->
+    <link href="~/Areas/Admin/Content/Manage/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="~/Areas/Admin/Content/Manage/build/css/custom.min.css" rel="stylesheet">
+
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="/User/User/Index" class="site_title" target="_blank"><span>CTTNHH BDS DN</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+
+                    </div>
+                    <!-- /menu profile quick info -->
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="/Admin/Login/Index"><i class="fa fa-home"></i> Trang Chủ </a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/BatDongSan/BatDongSan"><i class="fa fa-edit"></i> Bất Động Sản <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/LoaiBatDongSan/LoaiBatDongSan"><i class="fa fa-desktop"></i> Loại Bất Động Sản <span class="fa fa-chevron-down"></span></a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/NhanVien/NhanVien"><i class="fa fa-edit"></i> Nhân Viên <span class="fa fa-chevron-down"></span></a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/QuanTri/QuanTri"><i class="fa fa-edit"></i> Quản Trị <span class="fa fa-chevron-down"></span></a>
+                                </li>
+
+                                <li>
+                                    <a href="/Admin/ThanhVien/ThanhVien"><i class="fa fa-edit"></i> Thành Viên <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/KhachHang/KhachHang"><i class="fa fa-edit"></i> Khách Hàng <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/BinhLuan/BinhLuan"><i class="fa fa-edit"></i> Bình Luận Người Dùng <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/QuanLyDatThue/QuanLyDatThue"><i class="fa fa-edit"></i> Quản Lý Đặt Thuê<span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                @*<li>
+                                    <a href="/Admin/QuanLyDatThueKhachHang/QuanLyDatThueKhachHang"><i class="fa fa-edit"></i> Quản Lý Đặt Thuê KH<span class="fa fa-chevron-down"></span></a>
+                                </li>*@
+                                <li>
+                                    <a href="/Admin/HoaDon/HoaDon"><i class="fa fa-desktop"></i> Hóa Đơn  <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                                @*<li>
+                                    <a href="/Admin/HoaDonKhachHang/HoaDonKhachHang"><i class="fa fa-desktop"></i> Hóa Đơn Khách Hàng <span class="fa fa-chevron-down"></span></a>
+                                </li>*@
+                                <li>
+                                    <a href="/Admin/LienHe/LienHe"><i class="fa fa-desktop"></i> Tin nhắn <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small">
+                        <a data-toggle="tooltip" data-placement="top" title="Settings">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Lock">
+                            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                        </a>
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="/Admin/Login/Logout">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="~/Areas/Admin/Content/Manage/images/R.png" alt="" />
+                                    @if (Session["User"] != null)
+                                    {
+                                        <span>Welcome @Session["User"].ToString()</span>
+                                    }
+                                    <span class=" fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a href="/Admin/Login/ChangePass">ChangePass</a></li>
+                                    <li><a href="/Admin/Login/Logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation" class="dropdown">
+                                <a href="/Admin/LienHe/LienHe" class="fa fa-envelope-o"></a>
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+            <!-- page content -->
+            <div class="right_col" role="main">
+                @RenderBody()
+            </div>
+            <!-- /page content -->
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    CTTNHH BDS DN <a href="#"></a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+    <!-- jQuery -->
+
+    <script src="~/Areas/Admin/Content/Manage/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="~/Areas/Admin/Content/Manage/vendors/moment/min/moment.min.js"></script>
+    <script src="~/Areas/Admin/Content/Manage/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="~/Areas/Admin/Content/Manage/build/js/custom.min.js"></script>
+
+</body>
+</html>

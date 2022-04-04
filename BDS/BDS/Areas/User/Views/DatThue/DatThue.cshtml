@@ -1,0 +1,140 @@
+﻿@using BDS.Models
+@model List<DatThue>
+@{
+    ViewBag.Title = "DatThue";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="table-responsive">
+            @*<table id="divGioHang">
+                <tr>
+                    <td>Mã Sản Phẩm</td>
+
+                    <td>Tên Sản Phẩm</td>
+
+                    <td>Mã Nhóm</td>
+
+                    <td>Mã Loại BDS</td>
+
+                    <td></td>
+                </tr>
+
+                @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.iMaBDS</td>
+                <td>@item.iTenBDS</td>
+                <td>@item.iMaNhom</td>
+                <td>@item.iMaLoaiBDS</td>
+                <td>
+                    @Html.ActionLink("Xóa", "XoaDatThue", new { @iMaBDS = item.iMaBDS })
+                </td>
+            </tr>
+}
+
+                <tr>
+                    <td colspan="3" style="text-align:right;color:blue">
+                        @using (Html.BeginForm("Index", "User"))
+                {
+                    <input type="submit" value="Tiếp tục xem" />
+        }
+
+
+                    </td>
+                    <td colspan="2" style="text-align:left;color:blue">
+                        @using (Html.BeginForm("DatThueNgay", "DatThue"))
+                {
+                    <input type="submit" value="Đặt thuê" />
+        }
+                    </td>
+                </tr>
+            </table>*@
+
+            <table>
+                <tr>
+                    <th>Mã bất động sản</th>
+                    <th>Tên bất động sản</th>
+                    <th>Mã nhóm</th>
+                    <th>Mã Loại BDS</th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+    {
+
+            <tr>
+                <td>@item.iMaBDS</td>
+                <td>@item.iTenBDS</td>
+                <td>@item.iMaNhom</td>
+                <td>@item.iMaLoaiBDS</td>
+                <td>
+                    @Html.ActionLink("Xóa", "XoaDatThue", new { @iMaBDS = item.iMaBDS })
+                </td>
+            </tr>
+}
+                <tr>
+                    <td colspan="3" style="text-align:right;color:blue">
+                        @using (Html.BeginForm("Index", "User"))
+    {
+                    <input type="submit" style="cursor:pointer;margin-bottom: 20px;" value="&lsaquo; Tiếp tục xem" id="ttx" class="btn btn-success">
+}
+
+
+                    </td>
+                    <td colspan="2" style="text-align:left;color:blue">
+                        @using (Html.BeginForm("DatThueNgay", "DatThue"))
+    {
+                    <input type="submit" style="cursor:pointer;margin-bottom: 20px;" value="Đặt thuê &rsaquo;   " id="ttx" class="btn btn-success">
+}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+@*Css giỏ hàng*@
+@*<style>
+    #divGioHang {
+        border: 1px solid #EEEEEE;
+        margin-left: 10%;
+    }
+
+        #divGioHang td {
+            padding: 10px;
+            border: 1px solid #EEEEEE;
+        }
+</style>*@
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+

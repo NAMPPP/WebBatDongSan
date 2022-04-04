@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "ThongBao";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<h2>Bạn đã đăng tin lên trang web thành công ! Vào trang cá nhân để xem chi tiết !</h2>
+
+<div>
+    @Html.ActionLink("Chuyển tới Trang cá nhân", "Account", "User", new { @class = "btn btn-success" }, null)
+</div>
+

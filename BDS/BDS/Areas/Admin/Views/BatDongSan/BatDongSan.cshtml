@@ -1,0 +1,98 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.BatDongSan>
+@{
+    ViewBag.Title = "BatDongSan";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Danh sách: </h2>
+<div class="x_content">
+    <div class="table-responsive">
+        <a href="/Admin/BatDongSan/Create" class="btn btn-success">Thêm Bất Động Sản</a>
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title">Mã BĐS</th>
+                    <th class="column-title">Tên BĐS</th>
+                    <th class="column-title">Mã Nhóm</th>
+                    <th class="column-title">Mã Loại</th>
+                    <th class="column-title">Ngày đăng</th>
+                    <th class="column-title">UserName</th>
+                    <th class="column-title">Duyệt</th>
+                    <th class="column-title"></th>
+
+                    <th class="bulk-actions" colspan="7">
+                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+            {
+                <tr class="even pointer">
+                    <td> @item.MaBDS </td>
+                    <td> @item.TenBDS </td>
+                    <td> @item.MaNhom </td>
+                    <td> @item.MaLoaiBDS </td>
+                    <td> @item.NgayDang </td>
+                    <td> @item.UserName </td>
+                    <td> @item.Duyet</td>
+                    <td>
+
+                        @if (@item.Duyet == 1)
+                    {
+                        using (Html.BeginForm("BoDuyetBDS", "BatDongSan", new
+                        {
+                            @MaBDS = @item.MaBDS,
+                            @MaLoai = @item.MaLoaiBDS,
+                            @TenBDS = @item.TenBDS,
+                            @MaNhom = @item.MaNhom,
+                            @NgayDang = @item.NgayDang,
+                            @User = @item.UserName,
+                            @Duyet = @item.Duyet
+                        }))
+                        {
+                            <input type="submit" style="cursor:pointer;" value="Bỏ Duyệt" id="duyet" class="btn btn-success">
+                            <a href="/Admin/BatDongSan/Edit/@item.MaBDS" class="btn btn-success">Sửa</a>
+                            <a href="/Admin/BatDongSan/Detail/@item.MaBDS" class="btn btn-success">Chi Tiết</a>
+                            <a href="/Admin/BatDongSan/Delete/@item.MaBDS" class="btn btn-success">Xóa</a>
+                    }
+                }
+                else
+                {
+                    using (Html.BeginForm("DuyetBDS", "BatDongSan", new
+                    {
+                        @MaBDS = @item.MaBDS,
+                        @MaLoai = @item.MaLoaiBDS,
+                        @TenBDS = @item.TenBDS,
+                        @MaNhom = @item.MaNhom,
+                        @NgayDang = @item.NgayDang,
+                        @User = @item.UserName,
+                        @Duyet = @item.Duyet
+                    }))
+                    {
+                        <input type="submit" style="cursor:pointer;" value="Duyệt" id="duyet" class="btn btn-success">
+                        <a href="/Admin/BatDongSan/Edit/@item.MaBDS" class="btn btn-success">Sửa</a>
+                        <a href="/Admin/BatDongSan/Detail/@item.MaBDS" class="btn btn-success">Chi Tiết</a>
+                        <a href="/Admin/BatDongSan/Delete/@item.MaBDS" class="btn btn-success">Xóa</a>
+                }
+            }
+
+
+
+
+
+                    </td>
+                </tr>
+        }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("BatDongSan", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+

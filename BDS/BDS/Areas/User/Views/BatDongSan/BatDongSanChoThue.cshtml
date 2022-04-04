@@ -1,0 +1,40 @@
+﻿@using BDS.ViewModel
+@model List<BDS.ViewModel.BatDongSanViewModel>
+@{
+    ViewBag.Title = "BatDongSan";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<h3>bất động sản đang cho chổ</h3>
+<div class="Features-grids">
+    @foreach (var item in Model)
+    {
+    <div class="col-md-3 Feature-grid" style="padding-bottom:20px" ;>
+        <a href="/User/User/Detail/@item.MaBDS">
+            <img src="@Url.Content(""+item.Anh)" width="300" height="400"  />
+        </a>
+        <p style="padding: 2px 0 1px 0">@item.TenBDS</p>
+        <p style="padding: 0 0 1px 0">@item.UserName</p>
+        @if (item.MaNhom == 1)
+    {
+        <p style="padding: 0 0 1px 0">$@item.Gia</p>
+}
+else
+{
+    <p style="padding: 0 0 1px 0">$@item.Gia/Tháng</p>
+}
+        <p style="padding: 0 0 1px 0">Đang @item.TenNhom</p>
+
+        @using (Html.BeginForm("ThemDatThue", "DatThue", new { @iMaBDS = item.MaBDS, @strURL = Request.Url.ToString() }))
+    {
+        <a href="/User/User/Detail/@item.MaBDS" class="btn btn-success">Chi tiết</a>
+        <a href="/User/BinhLuan/Create/@item.MaBDS" class="btn btn-success">Đánh giá</a>
+        <input type="submit" style="cursor:pointer" value="Đặt chổ" id="btnGioHang" class="btn btn-success">
+}
+    </div>
+    }
+
+
+    <div class="clearfix"></div>
+</div>
+

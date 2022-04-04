@@ -1,0 +1,58 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.NhanVien>
+@{
+    /**/
+
+    ViewBag.Title = "NhanVien";
+    Layout = "~/Areas/User/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="content">
+    <div class="about us">
+        <div class="container">
+            <h3>Bất Động Sản CTTNHH BDS DN</h3>
+            <div class="about-grids">
+                <div class="col-md-7 about-grid1">
+                    <h4>Là công ty chuyên cung cấp các dịch vụ bất động sản chuyên nghiệp ở TP Hồ Chí Minh Việt Nam. </h4>
+                    <i>
+                        <p>
+                            Chúng tôi tập trung vào bất động sản tại thành phố và khu vực lân cận như Đồng nai, Vũng tàu.
+                        </p>
+                        <p>
+                            Công ty chúng tôi được thành lập với sự cộng tác của các chuyên viên bản xứ và các chuyên gia nước ngoài tài năng nhất.
+                            Chúng tôi cung cấp cho khách hàng những lời khuyên hữu ích, dịch vụ khách hàng chất lượng cao để đi đến kết quả cuối cùng.
+                            Chúng tôi hợp tác trực tiếp với nhiều công ty phát triển nhà ở, đại lý độc quyền và các nhà điều hành dự án, cũng như liên kết với các luật sư và các cơ quan có thẩm quyền để đảm bảo giao dịch của bạn được thực hiện hiệu quả và thành công.
+
+                            Với kinh nghiệm và kiến thức về thị trường địa phương, chúng tôi luôn có thể thay mặt khách hàng thương lượng giá cả và các điều kiện khác ở mức tốt nhất mà khó có thể đạt được nếu các khách hàng là cá nhân tự thực hiện.
+
+                            Cho dù bạn quan tâm đến việc mua, bán, cho thuê, dịch vụ tư vấn, đầu tư hoặc bất cứ việc gì khác liên quan đến bất động sản và thị trường bất động sản ở TP Hồ Chí Minh – hãy liên hệ với chúng tôi!
+
+                        </p>
+                    </i>
+                </div>
+                <div class="col-md-5 about-grid">
+                    <img src="~/Areas/User/Content/images/hutech.jpg" class="img-responsive" alt="Photo" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="ourteam">
+        <div class="container">
+            <h3>Chúng tôi gồm:</h3>
+            <div class="team-grids">
+
+                @foreach (var item in Model)
+                {
+                <div class="col-md-3 team-grid">
+                    <h5>@item.HoTenNV</h5>
+                    <p>@item.ChucVu</p>
+                    <p>Điện thoại: @item.DienThoai</p>
+                    <p><a href="@item.Facebook" target="_blank">Facebook</a> </p>
+                    <p>@item.Email</p>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

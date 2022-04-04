@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "LienHe";
+    Layout = "~/Areas/User/Views/Shared/_UserLayout.cshtml";
+}
+@model AFModels.LienHe
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <section id="contact1">
+        <div class="section-content">
+            <h1 class="section-header">Liên hệ <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s">với chúng tôi</span></h1>
+        </div>
+        <div class="contact-section">
+            <div class="container">
+                <form>
+                    <div class="col-md-6 form-line">
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Họ tên</label>
+                            @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail">Địa chỉ Email</label>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Tiêu đề</label>
+                            @Html.EditorFor(model => model.TieuDe, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TieuDe, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="description">Lời nhắn</label>
+                            @Html.TextAreaFor(model => model.LoiNhan, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LoiNhan, "", new { @class = "text-danger" })
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>Gữi tin nhắn</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+}
+

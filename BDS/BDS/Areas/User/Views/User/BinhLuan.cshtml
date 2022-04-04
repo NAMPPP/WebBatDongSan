@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "BinhLuan";
+    Layout = "~/Areas/User/Views/Shared/_UserLayout.cshtml";
+}
+@section BinhLuan{
+    @using PagedList.Mvc;
+    @model PagedList.IPagedList<AFModels.BinhLuan>
+    <div class="container">
+        <div class="w3_agile_team_grid_right">
+            <h3>Bình luận của Khách hàng</h3>
+        </div>
+
+        <div class="w3ls_testimonials_grids">
+            <section class="center slider">
+                <div class="agileits_testimonial_grid">
+                    @foreach (var item in Model)
+                    {
+                        <div class="w3l_testimonial_grid">
+                            <p>
+                                @item.NoiDungBL
+                            </p>
+                            <h4>@item.TenBL</h4>
+                            <h5>@item.NgayBL</h5>
+                            <div class="w3l_testimonial_grid_pos">
+                                <img src="~/Areas/User/Content/images/test1.png" alt=" " class="img-responsive" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        </div>
+    </div>
+}
+

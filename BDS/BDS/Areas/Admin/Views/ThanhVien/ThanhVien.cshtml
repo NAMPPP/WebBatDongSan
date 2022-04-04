@@ -1,0 +1,62 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.ThanhVien>
+@{
+    ViewBag.Title = "ThanhVien";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Danh sách: </h2>
+<div class="x_content">
+    <div class="table-responsive">
+        <a href="/Admin/ThanhVien/Create" class="btn btn-success">Thêm Thành Viên</a>
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title">Mã TV</th>
+                    <th class="column-title">UserName</th>
+                    <th class="column-title">Pw</th>
+                    <th class="column-title">Họ Tên TV</th>
+                    <th class="column-title">Điện thoại</th>
+                    <th class="column-title">Giới tính</th>
+                    <th class="column-title">Địa chỉ</th>
+                    <th class="column-title">Email</th>
+                    <th class="column-title">Ngày Đăng ký</th>
+                    <th class="column-title"></th>
+                    <th class="bulk-actions" colspan="7">
+                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td> @item.MaTV</td>
+                    <td> @item.UserName </td>
+                    <td> @item.Pw</td>
+                    <td> @item.HoTenTV </td>
+                    <td> @item.DienThoai </td>
+                    <td> @item.GioiTinh </td>
+                    <td> @item.DiaChi </td>
+                    <td> @item.Email </td>
+                    <td> @item.NgayDK </td>
+                    <td>
+                        <a href="/Admin/ThanhVien/Edit/@item.MaTV" class="btn btn-success">Sửa</a>
+                        <a href="/Admin/ThanhVien/Delete/@item.MaTV" class="btn btn-success">Xóa</a>
+                        @using (Html.BeginForm("DuyetThanhVien", "ThanhVien", new { @User = @item.UserName, @Pw = @item.Pw}))
+    {
+                    <input type="submit" style="cursor:pointer;" value="Duyệt TV" id="danhgia" class="btn btn-success">
+}
+                    </td>
+                </tr>
+                }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("ThanhVien", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+

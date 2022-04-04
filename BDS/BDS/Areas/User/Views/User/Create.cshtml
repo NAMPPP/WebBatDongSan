@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+@model AFModels.ThanhVien
+<div class="content">
+    <!-- registration -->
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="main-1">
+            <div class="container">
+                <div class="register">
+
+                    <form>
+                        <h3>Thông tin đăng ký</h3>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="wow fadeInLeft" data-wow-delay="0.4s">
+                            @Html.Label("Họ Tên", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.HoTenTV, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.HoTenTV, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            @Html.Label("Tên đăng nhập", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            @Html.Label("Mật khẩu", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Pw, new { htmlAttributes = new { @class = "form-control make-pass" } })
+                            @Html.ValidationMessageFor(model => model.Pw, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            @Html.Label("Số điện thoại", htmlAttributes: new { @class = "control-label" })
+                            @Html.EditorFor(model => model.DienThoai, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            @Html.Label("Giới tính", htmlAttributes: new { @class = "control-label" })
+                            Nam: @Html.RadioButtonFor(model => model.GioiTinh, "Male")
+                            Nữ: @Html.RadioButtonFor(model => model.GioiTinh, "Female")
+
+                            @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="wow fadeInRight" data-wow-delay="0.4s">
+                            @Html.Label("Địa chỉ", htmlAttributes: new { @class = "control-label" })
+                            @Html.TextAreaFor(model => model.DiaChi, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                        </div>
+
+                        <div class="clearfix"> </div>
+                    </form>
+                    <div class="clearfix"> </div>
+                    <div class="register-but">
+                        <input type="submit" value="Đăng ký" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+    $(".make-pass").attr("type", "password");
+        </script>
+    }
+    <div>
+        @Html.ActionLink("Quay lại", "Login", null, new { @class = "btn btn-success" })
+    </div>
+    <!-- registration -->
+
+</div>
+

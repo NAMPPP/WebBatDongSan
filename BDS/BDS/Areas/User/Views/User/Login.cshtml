@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<div class="content">
+    <div class="main-1">
+        <div class="container">
+            <div class="login-page">
+                <div class="account_grid">
+                    <div class="col-md-6 login-left wow fadeInLeft" data-wow-delay="0.4s">
+                        <h3>Đăng ký thành viên</h3>
+                        <a class="button" href="/User/User/Create">Tạo tài khoản mới &rsaquo;</a>
+                    </div>
+                    <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
+                        <h3>đăng nhập</h3>
+                        <p>
+                            Nếu bạn có tài khoản với chúng tôi, vui lòng đăng nhập.
+                        </p>
+                        @using (Html.BeginForm("Login", "User", FormMethod.Post))
+    {
+                    <form>
+                        <div>
+                            @Html.TextBox("txtTaiKhoan", "", new { @class = "form-control", @style = "width: 500px;", @placeholder = "Tên đăng nhập" })
+                        </div>
+                        <div>
+                            @Html.Password("txtMatKhau", "", new { @class = "form-control", style = "width: 500px;", @placeholder = "Mật khẩu" })
+                        </div>
+                        <div>
+                            <i>
+                                @Html.ActionLink("Quên mật khẩu !", "ForgotPass")
+                            </i>
+                            
+                        </div>
+                        <input type="submit" value="Đăng nhập &rsaquo;" class="button">
+                    </form>
+}
+     
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login -->
+</div>

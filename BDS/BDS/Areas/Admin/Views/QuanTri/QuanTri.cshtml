@@ -1,0 +1,49 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<AFModels.QuanTri>
+@{
+    ViewBag.Title = "QuanTri";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2> Danh sách: </h2>
+<div class="x_content">
+
+    <a href="/Admin/QuanTri/Create/" class="btn btn-success">Thêm Tài Khoản</a>
+    <div class="table-responsive">
+
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title">UserName </th>
+                    <th class="column-title">Pw </th>
+                    <th class="column-title">Mã PQ </th>
+                    <th class="column-title"></th>
+
+                    <th class="bulk-actions" colspan="7">
+                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td> @item.UserName </td>
+                    <td> @item.Pw </td>
+                    <td> @item.MaPQ </td>
+                    <td>
+                        <a href="/Admin/QuanTri/Edit/@item.UserName" class="btn btn-success">Sửa</a>
+                        <a href="/Admin/QuanTri/Delete/@item.UserName" class="btn btn-success">Xóa</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+            <tr>
+                @Html.PagedListPager(Model, pageNumber => Url.Action("QuanTri", new { pageNumber }))
+            </tr>
+        </table>
+    </div>
+</div>
+
+

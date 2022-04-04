@@ -1,0 +1,55 @@
+﻿@using BDS.ViewModel
+@model List<BDS.ViewModel.BatDongSanViewModel>
+@{
+    ViewBag.Title = "Poster";
+    Layout = "~/Areas/User/Views/Shared/_UserAbout.cshtml";
+}
+
+<h2> Danh sách bất động sản đã đăng: </h2>
+<div class="x_content">
+    <div class="table-responsive">
+        <a href="/User/BatDongSan/Create" class="btn btn-success">Đăng tin</a>
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+                <tr class="headings">
+                    <th class="column-title" width="100">Mã BĐS</th>
+                    <th class="column-title">Tên BĐS</th>
+                    <th class="column-title" width="100">Mã Nhóm</th>
+                    <th class="column-title"  width="100">Mã Loại</th>
+                    <th class="column-title">Ngày đăng</th>
+                    <th class="column-title" width="150">Duyệt</th>
+                    <th class="column-title" width="300"></th>
+
+
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                <tr class="even pointer">
+                    <td> @item.MaBDS </td>
+                    <td> @item.TenBDS </td>
+                    <td> @item.MaNhom </td>
+                    <td> @item.MaLoaiBDS </td>
+                    <td> @item.NgayDang </td>
+                    @if (item.Duyet == 1)
+    {
+                <td> Đã được duyệt </td> }
+else
+{
+                <td> Chưa được duyệt </td>
+}
+                    <td>
+                        <a href="/User/BatDongSan/Edit/@item.MaBDS" class="btn btn-success">Sửa</a>
+                        <a href="/User/BatDongSan/Detail/@item.MaBDS" class="btn btn-success">Chi Tiết</a>
+                        <a href="/User/BatDongSan/Delete/@item.MaBDS" class="btn btn-success">Xóa</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
